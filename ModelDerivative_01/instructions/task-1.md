@@ -29,19 +29,17 @@ To set the environment variables:
 
 ## Get an Access Token
 
-To get an Access Token, you must send an `authenticate` request to APS. The Postman Collection has a prepopulated authenticate request that you can send.
+Before you request an access token, you must encode your Client ID and Client Secret to ensure the integrity of the data you send. To do this, first, concatenate your Client ID with your Client Secret using the colon character as a separator. After that, you must convert the concatenated string to a Base64 encoded string. A pre-request script in Postman handles this conversion for you when it sends the next request to APS.
 
-To send the authenticate request to APS:
+To request an Acess Token from APS:
 
 1. In the Postman sidebar, click **Task 1 - Obtain an Access Token > POST Get an Access Token**. The request loads.
 
-2. Click the **Body** tab.
+2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret. 
 
-3. Move the cursor over the values for **client_id** and **client_secret** in the **VALUES** column, and verify that the values you specified as environment variables are displayed.
+   ![Pre-request Script](../images/t1_tutorial_01_task1-preview_environment_variables.png "Preview Client Id and Client Secret")
 
-   ![Preview Client Id and Client Secret](../images/t1_tutorial_01_task1-preview_environment_variables.png "Preview Client Id and Client Secret")
-
-4. Click **Send**. This sends the HTTP request to APS. If your request authenticates successfully, you should see a return status of **200 OK**, and the response will be similar to the following:
+3. Click **Send**. This sends the HTTP request to APS. If your request authenticates successfully, you should see a return status of **200 OK**, and the response will be similar to the following:
 
     ![Successful authentication](../images/t1_tutorial_01_task1-authenticate_successfull.png "Successful authentication")
 
