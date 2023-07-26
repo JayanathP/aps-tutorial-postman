@@ -31,11 +31,11 @@ To set the environment variables:
 
 Before you request an access token, you must encode your Client ID and Client Secret to ensure the integrity of the data you send. To do this, first, concatenate your Client ID with your Client Secret using the colon character as a separator. After that, you must convert the concatenated string to a Base64 encoded string. A pre-request script in Postman handles this conversion for you when it sends the next request to APS.
 
-To request an Acess Token from APS:
+To request an Access Token from APS:
 
 1. In the Postman sidebar, click **Task 1 - Obtain an Access Token > POST Get an Access Token**. The request loads.
 
-2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret. 
+2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret.
 
    ![Pre-request Script](../images/t1_tutorial_01_task1-preview_environment_variables.png "Preview Client Id and Client Secret")
 
