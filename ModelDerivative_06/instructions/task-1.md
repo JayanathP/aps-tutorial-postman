@@ -37,13 +37,13 @@ To request an Access Token from APS:
 
 2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret.
 
-   ![Pre-request Script](../images/tutorial_06_task_1_client_id_view_in_body.png)
+   ![Pre-request Script](../images/tutorial_06_task_1_client_id_view_in_body.png "Pre-request Script")
 
 4. Click **Send**. Postman sends the HTTP request to APS. If the request authenticates successfully, the server returns `200 OK`. The response screen is similar to the following:
 
     ![Successful authentication](../images/tutorial_06_task_1_access_token_authentication.png "Successful authentication")
 
-Postman saves the Access Token in the Postman environment variable `access_token`. Postman will pick up the Access Token from this variable for all subsequent requests. The token remains valid for one hour.  If the token expires, you must obtain a fresh token by sending an `authenticate` request to APS once again. 
+Postman saves the Access Token in the Postman environment variable `access_token`. Postman will pick up the Access Token from this variable for all subsequent requests. The token remains valid for one hour.  If the token expires, you must obtain a fresh token by sending an `authenticate` request to APS once again.
 
 
 [:rewind:](../readme.md "readme.md") [:arrow_backward:](before_you_begin.md "Previous task") [:arrow_forward:](task-2.md "Next task")

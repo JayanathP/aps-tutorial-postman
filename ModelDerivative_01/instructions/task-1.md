@@ -37,7 +37,7 @@ To request an Access Token from APS:
 
 2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret.
 
-   ![Pre-request Script](../images/t1_tutorial_01_task1-preview_environment_variables.png "Preview Client Id and Client Secret")
+   ![Pre-request Script](../images/t1_tutorial_01_task1-preview_environment_variables.png "Pre-request Script")
 
 3. Click **Send**. This sends the HTTP request to APS. If your request authenticates successfully, you should see a return status of **200 OK**, and the response will be similar to the following:
 

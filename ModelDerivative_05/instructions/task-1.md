@@ -41,7 +41,7 @@ To request an Access Token from APS:
 
 2. Click the **Pre-request Script** tab. Observe the script that converts your Client ID and Client Secret.
 
-   ![Pre-request Script](../images/tutorial_05_task_1_client_id_view.png)
+   ![Pre-request Script](../images/tutorial_05_task_1_client_id_view.png "Pre-request Script")
 
 4. Click **Send**. Postman sends the HTTP request to APS. If the request authenticates successfully, you should see a return status of **200 OK**. Expect a response similar to the following:
 
