@@ -2,10 +2,10 @@
 
 ## Create an App
 
-1. Follow the instructions on the tutorial [Create an App](https://aps.autodesk.com/en/docs/oauth/v1/tutorials/create-app/).
- When specifying details of the app,  select "Design Automation API" and "Data Management API".
+1. Follow the instructions on the tutorial [Create an App](https://aps-stg.autodesk.com/en/docs/oauth/v2/tutorials/create-app/).
+ When specifying **API Access**, ensure that "Design Automation API" and "Data Management API" are selected.
 
-2. Jot down the Client ID and Client Secret of the app you created.
+2. Note down the Client ID and Client Secret of the app you created.
 
 ## Save Client ID and Client Secret to Postman Environment Variables
 
