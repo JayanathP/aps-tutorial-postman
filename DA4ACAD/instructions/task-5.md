@@ -73,7 +73,7 @@ To make the uploaded file available for download, you must specifically instruct
    The Object ID that is returned is saved to a Collection Variable named `ossDwgFileUrn`. 
 
 
-## Define an Object ID for the resulting text file
+## Save the Object ID of the resulting text file to a Postman Variable
 
 `ListLayersActivity` generates a text file containing layer names as an output. To enable Design Automation to save this file in OSS, you supply the URN specifying the location where Design Automation should save the file to. 
 
