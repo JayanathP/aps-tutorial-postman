@@ -40,7 +40,7 @@ To get an Access Token, you must send an `authenticate` request to APS. The Post
 4. Click **Send**. The request is sent to APS. If your request authenticates successfully, you should see a response similar to the following:
 ![Successful authentication](../images/task2-authenticate_successfull.png "Successful authentication")
 
-Postman saves the Access Token in the Postman Environment Variable `dasApiToken`. Postman picks up the Access Token from this variable for all subsequent requests. This variable eliminates the need for you to repeatedly specify the value of the token for subsequent requests.
+Postman saves the Access Token in a Postman Collection Variable named `dasApiToken`. Postman picks up the Access Token from this variable for all subsequent requests. This variable eliminates the need for you to repeatedly specify the value of the token for subsequent requests.
 
 
 [:rewind:](../readme.md "readme.md") [:arrow_backward:](before_you_begin.md "Previous task" ) [:arrow_forward:](task-2.md "Next task")

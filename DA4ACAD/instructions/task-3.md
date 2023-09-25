@@ -30,7 +30,7 @@ When registering the AppBundle, you provide a name for the AppBundle (the id), a
 
     ![AppBundel Registered](../images/task3-appbundle_registered.png "AppBundel Registered")
 
-    `uploadParameters` shown in the preceding image contains the information required to upload the AppBundle to APS. This information is saved to a series of Postman Environment variables, so that it can be reused in the next step.
+    `uploadParameters` shown in the preceding image contains the information required to upload the AppBundle to APS. This information is saved to a series of Postman Collection Variables, so that they can be reused in the next step.
 
     ![formData](../images/task3-appbundle_form_data.png "formData")
 
