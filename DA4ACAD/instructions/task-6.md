@@ -8,8 +8,6 @@ Like in function calls, optional parameters of the Activity can be skipped and l
 
 For this exercise, you create a WorkItem to execute the Activity ListLayers. The WorkItem uses the dwg file you uploaded in the previous task as the input for the Activity. The request downloads the dwg file using its URN, which is stored in the Collection Variable `ossDwgFileUrn`.
 
-`ListLayersActivity` produces a text file containing layer names as an output. The Postman Environment Variable `ossOutputFileObjectKey` is reserved for the output text file that the add-in produces.
-
 ## Create a WorkItem
 
 
