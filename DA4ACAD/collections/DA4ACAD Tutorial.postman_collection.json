@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "2ea2fa27-d741-49b2-b271-1c1392840825",
-		"name": "DA4ACAD Tutorial",
+		"name": "Automating AutoCAD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3021021"
 	},
@@ -600,7 +600,7 @@
 					"response": []
 				},
 				{
-					"name": "Upload the input File to OSS Copy",
+					"name": "Upload the Input File to OSS Copy",
 					"event": [
 						{
 							"listen": "test",
@@ -628,7 +628,7 @@
 						"body": {
 							"mode": "file",
 							"file": {
-								"src": ""
+								"src": "/Users/pereraj/autodesk-jp-public-repos/aps-tutorial-postman/DA4ACAD/tutorial_data/Mechanical - Multileaders.dwg"
 							}
 						},
 						"url": {
@@ -697,128 +697,6 @@
 								"signeds3upload"
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Temporary Download URL",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var body = JSON.parse(responseBody);",
-									"pm.collectionVariables.set(\"ossDwgFileSignedUrl\", body[\"signedUrl\"]);",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{dasApiToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}\n"
-						},
-						"url": {
-							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossDwgFileObjectKey}}/signed",
-							"protocol": "https",
-							"host": [
-								"developer",
-								"api",
-								"autodesk",
-								"com"
-							],
-							"path": [
-								"oss",
-								"v2",
-								"buckets",
-								"{{ossBucketKey}}",
-								"objects",
-								"{{ossDwgFileObjectKey}}",
-								"signed"
-							]
-						},
-						"description": "[See documentation](https://aps.autodesk.com/en/docs/data/v2/reference/http/buckets-:bucketKey-objects-:objectName-signed-POST/)"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Temporary URL to Upload Output",
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									""
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"var body = JSON.parse(responseBody);",
-									"pm.collectionVariables.set(\"ossOutputFileSignedUrl\", body[\"signedUrl\"]);"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{dasApiToken}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}"
-						},
-						"url": {
-							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputFileObjectKey}}/signed?access=readwrite",
-							"protocol": "https",
-							"host": [
-								"developer",
-								"api",
-								"autodesk",
-								"com"
-							],
-							"path": [
-								"oss",
-								"v2",
-								"buckets",
-								"{{ossBucketKey}}",
-								"objects",
-								"{{ossOutputFileObjectKey}}",
-								"signed"
-							],
-							"query": [
-								{
-									"key": "access",
-									"value": "readwrite"
-								}
-							]
-						},
-						"description": "[See documentation](https://aps.autodesk.com/en/docs/data/v2/reference/http/buckets-:bucketKey-objects-:objectName-signed-POST/)"
 					},
 					"response": []
 				}
@@ -1395,6 +1273,128 @@
 					"response": []
 				},
 				{
+					"name": "Get S3 Download URL",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var body = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"ossDwgFileSignedUrl\", body[\"signedUrl\"]);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{dasApiToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}\n"
+						},
+						"url": {
+							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossDwgFileObjectKey}}/signed",
+							"protocol": "https",
+							"host": [
+								"developer",
+								"api",
+								"autodesk",
+								"com"
+							],
+							"path": [
+								"oss",
+								"v2",
+								"buckets",
+								"{{ossBucketKey}}",
+								"objects",
+								"{{ossDwgFileObjectKey}}",
+								"signed"
+							]
+						},
+						"description": "[See documentation](https://aps.autodesk.com/en/docs/data/v2/reference/http/buckets-:bucketKey-objects-:objectName-signed-POST/)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Temporary URL to Upload Output",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var body = JSON.parse(responseBody);",
+									"pm.collectionVariables.set(\"ossOutputFileSignedUrl\", body[\"signedUrl\"]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{dasApiToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputFileObjectKey}}/signed?access=readwrite",
+							"protocol": "https",
+							"host": [
+								"developer",
+								"api",
+								"autodesk",
+								"com"
+							],
+							"path": [
+								"oss",
+								"v2",
+								"buckets",
+								"{{ossBucketKey}}",
+								"objects",
+								"{{ossOutputFileObjectKey}}",
+								"signed"
+							],
+							"query": [
+								{
+									"key": "access",
+									"value": "readwrite"
+								}
+							]
+						},
+						"description": "[See documentation](https://aps.autodesk.com/en/docs/data/v2/reference/http/buckets-:bucketKey-objects-:objectName-signed-POST/)"
+					},
+					"response": []
+				},
+				{
 					"name": "My App Nickname",
 					"request": {
 						"method": "GET",
@@ -1519,6 +1519,10 @@
 		},
 		{
 			"key": "ossDwgFileObjectId",
+			"value": ""
+		},
+		{
+			"key": "ossDwgFileUrn",
 			"value": ""
 		}
 	]
