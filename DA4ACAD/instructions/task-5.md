@@ -32,7 +32,7 @@ There are two Postman Environment Variables you must specify for this task. They
 
 2. Click the **Environment quick look** icon on the upper right corner of Postman.
 
-3. In the **CURRENT VALUE** column, in the **ossDwgFileObjectKey** row, specify an Object Key (**Tip:** Specify the file name of the dwg file: *Mechanical - Multileaders.dwg*).
+3. In the **CURRENT VALUE** column, in the **ossDwgFileObjectKey** row, specify an Object Key for the file you are going to upload (**Tip:** Specify the file name of the dwg file: *Mechanical - Multileaders.dwg*).
 
 4. Click the **Environment quick look** icon to hide the variables.
 
