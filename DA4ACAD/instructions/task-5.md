@@ -1,10 +1,10 @@
-# Task 5 - Prepare cloud storage
+# Task 5 - Prepare Cloud Storage
 
 The Activity ListLayersActivity takes a dwg file as an input, extracts layer names from it, and produces a text file containing the layer names as output. In this task, we prepare the cloud storage to hold these files. While you can use any cloud storage service for this purpose, this tutorial uses the Object Storage Service (OSS) through the Data Management API.
 
 There are two Postman Environment Variables you must specify for this task. They are
 - `ossBucketKey` - The Bucket Key for the Bucket that holds your files in the cloud.
-- `ossDwgFileObjectKey` - An ID for the dwg file that the activity must run operate on. 
+- `ossDwgFileObjectKey` - An ID for the dwg file that the activity must run operate on.
 
 
 ## Create a Bucket
@@ -44,7 +44,7 @@ There are two Postman Environment Variables you must specify for this task. They
 
 
 
-## Upload input file to OSS
+## Upload Input File to OSS
 
 1. On the Postman sidebar, click **Task 5 - Prepare Cloud Storage > PUT Upload Input File to OSS**. The request loads.
 
@@ -58,9 +58,9 @@ There are two Postman Environment Variables you must specify for this task. They
 
     ![Successful upload of input file](../images/task5-upload.png "Uploading input file")
 
-## Complete the upload
+## Complete the Upload
 
-To make the uploaded file available for download, you must specifically instruct OSS that the upload process has been completed. 
+To make the uploaded file available for download, you must specifically instruct OSS that the upload process has been completed.
 
 1. On the Postman sidebar, click **Task 5 - Prepare Cloud Storage > POST Complete the upload**. The request loads.
 
@@ -70,12 +70,12 @@ To make the uploaded file available for download, you must specifically instruct
 
     ![Successful upload of input file](../images/task5-successful_upload.png "Successful upload of input file")
 
-   The Object ID that is returned is saved to a Collection Variable named `ossDwgFileUrn`. 
+   The Object ID that is returned is saved to a Collection Variable named `ossDwgFileUrn`.
 
 
-## Save the Object ID of the resulting text file to a Postman Variable
+## Save the Object ID of the Resulting Text File to a Postman Variable
 
-`ListLayersActivity` generates a text file containing layer names as an output. To enable Design Automation to save this file in OSS, you supply the URN specifying the location where Design Automation should save the file to. 
+`ListLayersActivity` generates a text file containing layer names as an output. To enable Design Automation to save this file in OSS, you supply the URN specifying the location where Design Automation should save the file to.
 
 The URN of a file in OSS takes the form  ``urn:adsk.objects:os.object:<BUCKET_KEY>/<FILE_OBJECT_KEY>``. In order to construct the URN:
 
