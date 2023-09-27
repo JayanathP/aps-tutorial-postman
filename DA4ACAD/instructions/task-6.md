@@ -32,7 +32,7 @@ For this exercise, you create a WorkItem to execute the Activity ListLayers. The
     - `result` - Specifies the URN  of the output file resulting from the activity. It is constructed by combining the Object ID of the resulting text file with the bucket key and the key statement `urn:adsk.objects:os.object:`.
 
 
-## Check Status of a WorkItem
+## Check status of a WorkItem
 
 Design Automation WorkItems are queued before they are processed. Processing itself can take time. Once processing is done, you need to know if the WorkItems ran successfully or not. As such it is important for you to check the status of the WorkItem you created.
 

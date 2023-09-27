@@ -26,7 +26,7 @@ There are two Postman Environment Variables you must specify for this task. They
 
     ![Success full Bucket Creation](../images/task5-sucessfull_bucket_creation.png "Success full Bucket Creation")
 
-## Obtain Signed URL to Upload the Input File
+## Obtain Signed URL to upload the Input File
 
 1. Download the input file, *Mechanical - Multileaders.dwg* from the [*tutorial_data* folder of this repository](../tutorial_data).
 
@@ -44,7 +44,7 @@ There are two Postman Environment Variables you must specify for this task. They
 
 
 
-## Upload Input File to OSS
+## Upload input file to OSS
 
 1. On the Postman sidebar, click **Task 5 - Prepare Cloud Storage > PUT Upload Input File to OSS**. The request loads.
 
@@ -58,7 +58,7 @@ There are two Postman Environment Variables you must specify for this task. They
 
     ![Successful upload of input file](../images/task5-upload.png "Uploading input file")
 
-## Complete the Upload
+## Complete the upload
 
 To make the uploaded file available for download, you must specifically instruct OSS that the upload process has been completed.
 
@@ -73,7 +73,7 @@ To make the uploaded file available for download, you must specifically instruct
    The Object ID that is returned is saved to a Collection Variable named `ossDwgFileUrn`.
 
 
-## Save the Object ID of the Resulting Text File to a Postman Variable
+## Save the Object ID of the resulting text file to a Postman Variable
 
 `ListLayersActivity` generates a text file containing layer names as an output. To enable Design Automation to save this file in OSS, you supply the URN specifying the location where Design Automation should save the file to.
 

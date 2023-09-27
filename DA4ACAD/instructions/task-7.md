@@ -3,7 +3,7 @@
 Once the WorkItem has completed executing the Activity, Design Automation uploads the resulting text file to OSS. You use the Data Management API to download the text file to your local machine.
 
 
-## Get Temporary Download URL for the result
+## Get temporary download URL for the result
 
 1. On the Postman sidebar, click **Task 7 - Download the Result > Temporary Download URL for the result**. The request loads.
 
