@@ -28,11 +28,11 @@ To set the environment variables:
 
 ## Get an Access Token
 
-To get an Access Token, you must send an `authenticate` request to APS. The Postman collection has a prepopulated authenticate request that you can send. To send the request to APS:
+To get an Access Token, you must send an `authenticate` request to APS. The Postman collection has a pre-populated authenticate request that you can send. To send the request to APS:
 
 1. On the Postman sidebar, click **Task 1 - Obtain an Access Token > POST Get an Access Token**. The request loads.
 
-2. Click the **Pre-request Script** tab. Notice how a script (written in JavaScript) takes the Client ID and Client Secret, concatinates them, converts to a Base64 encoded string, and saves it back to a Postman Collection Variable named `client_auth_keys`.
+2. Click the **Pre-request Script** tab. Notice how a script (written in JavaScript) takes the Client ID and Client Secret, concatenates them, converts to a Base64 encoded string, and saves it back to a Postman Collection Variable named `client_auth_keys`.
    ![Preview Client Id and Client Secret](../images/task1-preview_environment_variables.png "Preview Client Id and Client Secret")
 
 3. Click the **Headers** tab. Take note of how `client_auth_keys` is used in the request header.

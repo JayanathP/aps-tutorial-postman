@@ -6,7 +6,7 @@ The relationship between an Activity and a WorkItem can be thought of as the rel
 Named parameters on the Activity have corresponding named arguments on the WorkItem.
 Like in function calls, optional parameters of the Activity can be skipped and left unspecified while posting a WorkItem.
 
-For this exercise, you create a WorkItem to execute the Activity ListLayers. The WorkItem uses the dwg file you uploaded in the previous task as the input for the Activity. The request downloads the dwg file using its URN, which is stored in the Collection Variable `ossDwgFileUrn`.
+For this exercise, you create a WorkItem to execute the Activity ListLayers. The WorkItem uses the dwg file you uploaded in the previous task as the input for the Activity.
 
 ## Create a WorkItem
 
@@ -25,11 +25,11 @@ For this exercise, you create a WorkItem to execute the Activity ListLayers. The
 
     - `arguments` - Contains all the parameters that need to be passed to the Activity specified by `activityId`. They must match the parameters you specified in Task 4, when you created the Activity.
 
-    - `InputDwg` - Specifies the URN of the input dwg file for the Activity. The value specified here is contained in the Postman variable `ossDwgFileSignedUrl`.
+    - `InputDwg` - Specifies the URN of the input dwg file for the Activity. It is constructed by combining the Object ID of the input dwg file with the Bucket Key and the statement `urn:adsk.objects:os.object:`.
 
     **Note** Had you uploaded a zip file instead of a dwg file, you would have been required specify the `pathInZip` attribute. This attribute specifies the path to the dwg file within the zip file.
 
-    - `result` - Specifies the URN  of the output file resulting from the activity. It is constructed by combining the Object ID of the resulting text file with the bucket key and the key statement `urn:adsk.objects:os.object:`.
+    - `result` - Specifies the URN  of the output file resulting from the activity. It is constructed by combining the Object ID of the resulting text file with the Bucket Key and the statement `urn:adsk.objects:os.object:`.
 
 
 ## Check status of a WorkItem
