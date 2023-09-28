@@ -22,7 +22,6 @@ When registering the AppBundle, you provide a name for the AppBundle (the id), a
 
     `uploadParameters` shown in the response section of the preceding image contains the information required to upload the AppBundle to APS. This information is saved to a series of Postman Collection variables, so that they can be reused in the next step.
 
-    ![formData](../images/task3-appbundle_form_data.png "formData")
 
 ## Upload the AppBundle
 

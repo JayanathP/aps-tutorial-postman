@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eb9f473f-4a26-4b60-b03d-b6bfd6770478",
+		"_postman_id": "c6002f92-0ea8-4461-93c1-6750c62ba536",
 		"name": "Automating Inventor",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3021021"
@@ -593,7 +593,7 @@
 							}
 						],
 						"url": {
-							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossDwgFileObjectKey}}/signeds3upload",
+							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossInputFileObjectKey}}/signeds3upload",
 							"protocol": "https",
 							"host": [
 								"developer",
@@ -607,7 +607,7 @@
 								"buckets",
 								"{{ossBucketKey}}",
 								"objects",
-								"{{ossDwgFileObjectKey}}",
+								"{{ossInputFileObjectKey}}",
 								"signeds3upload"
 							],
 							"query": [
@@ -622,7 +622,7 @@
 					"response": []
 				},
 				{
-					"name": "Upload the Input File to OSS Copy",
+					"name": "Upload the Input File to OSS",
 					"event": [
 						{
 							"listen": "test",
@@ -650,7 +650,7 @@
 						"body": {
 							"mode": "file",
 							"file": {
-								"src": "/Users/pereraj/autodesk-jp-public-repos/aps-tutorial-postman/DA4ACAD/tutorial_data/Mechanical - Multileaders.dwg"
+								"src": ""
 							}
 						},
 						"url": {
@@ -755,7 +755,7 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"dasWorkItemId\", body[\"id\"]);"
+									"pm.collectionVariables.set(\"dasWorkItemId\", body[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
@@ -874,16 +874,13 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"ossOutputIptFileDownloadUrl\", body[\"url\"]);",
+									"pm.collectionVariables.set(\"ossOutputIptFileDownloadUrl\", body[\"url\"]);",
 									""
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -896,10 +893,6 @@
 								"value": "Bearer {{dasApiToken}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}\n"
-						},
 						"url": {
 							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputIptFileObjectKey}}/signeds3download",
 							"protocol": "https",
@@ -946,16 +939,13 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"ossOutputBmpFileDownloadUrl\", body[\"url\"]);",
+									"pm.collectionVariables.set(\"ossOutputBmpFileDownloadUrl\", body[\"url\"]);",
 									""
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -968,10 +958,6 @@
 								"value": "Bearer {{dasApiToken}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}\n"
-						},
 						"url": {
 							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputBmpFileObjectKey}}/signeds3download",
 							"protocol": "https",

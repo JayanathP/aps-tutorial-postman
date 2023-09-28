@@ -92,6 +92,4 @@ The Activity `ChangeParamActivity` resizes the input Inventor part and produces 
 
 4. Click the **Environment quick look** icon.
 
-    ![Signed upload URL](../images/task5-signed_uploadurl_02.png "Signed upload URL")
-
 [:rewind:](../readme.md "readme.md") [:arrow_backward:](task-4.md "Previous task") [:arrow_forward:](task-6.md "Next task")
