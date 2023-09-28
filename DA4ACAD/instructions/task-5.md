@@ -84,3 +84,6 @@ The URN of a file in OSS takes the form  ``urn:adsk.objects:os.object:<BUCKET_KE
 2. In the **CURRENT VALUE** column, in the **ossOutputFileObjectKey** row, specify an Object Key for the text file that `ListLayersActivity` generates.
 
    **Tip:** You can use the file name of the text file (*layers.txt*) as its Object Key.
+
+
+[:rewind:](../readme.md "readme.md") [:arrow_backward:](task-4.md "Previous task") [:arrow_forward:](task-5.md "Next task")

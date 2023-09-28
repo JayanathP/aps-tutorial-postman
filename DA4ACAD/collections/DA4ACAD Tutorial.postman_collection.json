@@ -648,7 +648,7 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.collectionVariables.set(\"ossDwgFileUrn\", body.objectId);"
+									"pm.collectionVariables.set(\"ossDwgFileObjectId\", body.objectId);"
 								],
 								"type": "text/javascript"
 							}
@@ -762,7 +762,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"activityId\": \"{{dasNickName}}.{{dasActivityName}}+{{dasActivityAlias}}\",\n    \"arguments\": {\n        \"InputDwg\": {\n            \"url\": \"{{ossDwgFileObjectId}}\",\n            \"verb\": \"get\",\n            \"headers\": {\n                \"Authorization\": \"Bearer {{dasApiToken}}\"\n            }\n        },\n        \"result\": {\n            \"url\": \"urn:adsk.objects:os.object:{{ossBucketKey}}/{{ossOutputFileObjectKey}}\",\n            \"verb\": \"put\",\n            \"headers\": {\n                \"Authorization\": \"Bearer {{dasApiToken}}\"\n            }\n        }\n    }\n}"
+							"raw": "{\n    \"activityId\": \"{{dasNickName}}.{{dasActivityName}}+{{dasActivityAlias}}\",\n    \"arguments\": {\n        \"InputDwg\": {\n            \"url\": \"urn:adsk.objects:os.object:{{ossBucketKey}}/{{ossDwgFileObjectKey}}\",\n            \"verb\": \"get\",\n            \"headers\": {\n                \"Authorization\": \"Bearer {{dasApiToken}}\"\n            }\n        },\n        \"result\": {\n            \"url\": \"urn:adsk.objects:os.object:{{ossBucketKey}}/{{ossOutputFileObjectKey}}\",\n            \"verb\": \"put\",\n            \"headers\": {\n                \"Authorization\": \"Bearer {{dasApiToken}}\"\n            }\n        }\n    }\n}"
 						},
 						"url": {
 							"raw": "https://developer.api.autodesk.com/da/us-east/v3/workitems",
@@ -845,22 +845,25 @@
 			"name": "Task 7 - Download the Results ",
 			"item": [
 				{
-					"name": "Get Temporary Download URL for the Result",
+					"name": "Get S3 Download URL for the Result",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"ossOutputFileDownloadUrl\", body[\"signedUrl\"]);",
+									"pm.environment.set(\"ossOutputFileDownloadUrl\", body[\"url\"]);",
 									""
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -876,7 +879,7 @@
 							"raw": "{}\n"
 						},
 						"url": {
-							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputFileObjectKey}}/signed",
+							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputFileObjectKey}}/signeds3download",
 							"protocol": "https",
 							"host": [
 								"developer",
@@ -891,7 +894,7 @@
 								"{{ossBucketKey}}",
 								"objects",
 								"{{ossOutputFileObjectKey}}",
-								"signed"
+								"signeds3download"
 							]
 						},
 						"description": "[See documentation](https://aps.autodesk.com/en/docs/data/v2/reference/http/buckets-:bucketKey-objects-:objectName-signed-POST/)"
@@ -902,16 +905,7 @@
 					"name": "Download Output from OSS Copy",
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer {{dasApiToken}}"
-							}
-						],
+						"header": [],
 						"url": {
 							"raw": "{{ossOutputFileDownloadUrl}}",
 							"host": [
