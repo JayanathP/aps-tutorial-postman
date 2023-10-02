@@ -748,7 +748,7 @@
 			"name": "Task 6 - Submit a WorkItem",
 			"item": [
 				{
-					"name": "Send WorkItem",
+					"name": "Create a WorkItem",
 					"event": [
 						{
 							"listen": "test",
