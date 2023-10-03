@@ -18,8 +18,6 @@ When registering the AppBundle, you inform Design Automation that you want to na
 
     The `endpointURL` and `formData` information required to upload the AppBundle is saved to Postman Collection variables.
 
-    ![formData](../images/task4-appbundle_form_data.png "formData")
-
 ## Upload the AppBundle
 
 1. On the Postman sidebar, click **Task 4 - Upload AppBundle > POST Upload the AppBundle**. The request loads.
