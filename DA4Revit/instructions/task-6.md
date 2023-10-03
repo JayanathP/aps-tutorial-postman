@@ -53,11 +53,11 @@ There are three Postman Environment Variables you must specify for this task. Th
 
 3. Click **Select File** and pick the file you downloaded earlier (*DeleteWalls.rvt*).
 
-    ![Select file button](../images/task5-select_files_button.png "Select file button")
+    ![Select file button](../images/task6-select_files_button.png "Select file button")
 
 4. Click **Send**. If your request is successful, you should see a screen similar to the one below:
 
-    ![Successful upload of input file](../images/task5-successful_upload.png "Successful upload of input file")
+    ![Successful upload of input file](../images/task6-successful_upload.png "Successful upload of input file")
 
 ## Complete the upload
 

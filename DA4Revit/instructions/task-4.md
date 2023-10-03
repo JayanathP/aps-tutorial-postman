@@ -68,17 +68,15 @@ To register a new version:
 
 2. Click the **Body** tab, and scroll down such that the **file** row is visible.
 
-3. Move the cursor to the **VALUE** column on the **file** row, and close the box there. The *Select Files** button displays.
+3. Click **Select Files**, and pick *DeleteWallsApp.zip*, which you downloaded earlier.
 
-4. Click **Select Files**, and pick *DeleteWallsApp.zip*, which you downloaded earlier.
-
-5. Click **Send**.
+4. Click **Send**.
 
 ## Assign the Alias you specified earlier to the updated AppBundle
 
 1. On the Postman sidebar, click **Task 4 - Upload AppBundle > PATCH Assign an Existing Alias to the Updated AppBundle**. The request loads.
 
-2. Click the **Body** tab. Observe how the new version is specified using a Postman Environment Variable.
+2. Click the **Body** tab. Observe how the new version is specified.
 
 3. Click **Send**.
 
