@@ -1,15 +1,14 @@
 # Task 4 - Upload an AppBundle to Design Automation
 
-An AppBundle is a package of binaries and supporting files that make up a Revit add-in. See the corresponding [task in the Step-by-Step tutorial on the APS developer portal](https://aps.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/) for an explanantion of AppBundles and learn how to create an AppBundle. For the purpose of this Postman tutorial,  download *DeleteWallsApp.zip*, which is stored in the [*tutorial_data* folder of this repository](../tutorial_data). The file *DeleteWalls.dll* that is contained within this AppBundle is designed to run on Revit 2018.
+An AppBundle is a package of binaries and supporting files that make up a Revit add-in. See the corresponding [task in the Step-by-Step tutorial on the APS developer portal](https://aps.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/) for an explanation of AppBundles and learn how to create an AppBundle. For the purpose of this Postman tutorial,  download *DeleteWallsApp.zip*, which is stored in the [*tutorial_data* folder of this repository](../tutorial_data). The file *DeleteWalls.dll* that is contained within this AppBundle runs on Revit 2024.
 
 ## Register the AppBundle
 
-When registering the AppBundle, you inform Design Automation that you want to name it DeleteWallsApp, and that it must run on Revit 2020.
-**Note:** Screen captures show that the AppBundle runs on Revit 2018. However the Postman Collection has been updated to run on Revit 2020.
+When registering the AppBundle, you inform Design Automation that you want to name it DeleteWallsApp, and that it must run on Revit 2024.
 
 1. On the Postman sidebar, click **Task 4 - Upload AppBundle > POST Register the AppBundle**. The request loads.
 
-2. Click the **Body** tab, and verify that the `id`, and `engine` are set to `DeleteWallsApp`, and `Autodesk.Revit+2020`.
+2. Click the **Body** tab, and verify that the `id`, and `engine` are set to `DeleteWallsApp`, and `Autodesk.Revit+2024`.
 
     ![AppBundle Body](../images/task4-appbundle_body.png "AppBundle Body")
 
@@ -17,7 +16,7 @@ When registering the AppBundle, you inform Design Automation that you want to na
 
     ![AppBundel Registered](../images/task4-appbundle_registered.png "AppBundel Registered")
 
-    The `endpointURL` and `formData` information required to upload the AppBundle is saved to Postman Environment variables.
+    The `endpointURL` and `formData` information required to upload the AppBundle is saved to Postman Collection variables.
 
     ![formData](../images/task4-appbundle_form_data.png "formData")
 
@@ -45,7 +44,7 @@ When you registered the AppBundle earlier, it was registered as version 1 of the
 
 1. On the Postman sidebar, click **Task 4 - Upload AppBundle > POST Create an Alias for the AppBundle**. The request loads.
 
-2. Click the **Body** tab. and note how `id` is set to`test`.
+2. Click the **Body** tab. and note how `id` is set to `test`.
 
     ![Alias](../images/task4-appbundle_alias.png "Alias")
 
@@ -53,9 +52,9 @@ When you registered the AppBundle earlier, it was registered as version 1 of the
 
     ![Alias response](../images/task4-appbundle_alias_set.png "Alias response")
 
-## Update an Existing AppBundle
+## Update an existing AppBundle
 
-To update an existing AppBundle, you must register a new version of the AppBundle and then upload the updated AppBundle for that version. If you try to overwrite an existing AppBundle, Design Automation for Revit returns a `409 Conflict` error.
+To update an existing AppBundle, you must register a new version of the AppBundle and then upload the updated AppBundle for that version. If you try to overwrite an existing AppBundle, Design Automation returns a `409 Conflict` error.
 
 To register a new version:
 

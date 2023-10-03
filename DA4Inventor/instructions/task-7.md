@@ -1,6 +1,6 @@
 # Task 7 - Download the results
 
-Once the WorkItem has completed executing the Activity, Design Automation uploads the resulting files to OSS. You use the Data Management API to download the text file to your local machine.
+Once the WorkItem has completed executing the Activity, Design Automation uploads the resulting files to OSS. You use the Data Management API to download the files to your local machine.
 
 
 ## Get temporary download URL of the resized IPT file
