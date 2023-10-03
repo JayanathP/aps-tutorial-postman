@@ -36,7 +36,7 @@ There are three Postman Environment Variables you must specify for this task. Th
 
 4. Click the **Environment quick look** icon to hide the variables.
 
-5. On the Postman sidebar, click **Task 5 - Prepare Cloud Storage > GET Obtain Signed URL to Upload the Input File**. The request loads.
+5. On the Postman sidebar, click **Task 6 - Prepare Cloud Storage > GET Obtain Signed URL to Upload the Input File**. The request loads.
 
 6. Click **Send**. The signed URL is saved to a Collection Variable named `ContentUploadSignedURL`. The Upload Key is also saved to a variable named `UploadKey`. The Upload Key uniquely identifies the upload session. You use it later to complete the upload session.
 
@@ -47,7 +47,7 @@ There are three Postman Environment Variables you must specify for this task. Th
 
 ## Upload input file to OSS
 
-1. On the Postman sidebar, click **Task 5 - Prepare Cloud Storage > PUT Upload Input File to OSS**. The request loads.
+1. On the Postman sidebar, click **Task 6 - Prepare Cloud Storage > PUT Upload Input File to OSS**. The request loads.
 
 2. Click the **Body** tab.
 
@@ -57,7 +57,7 @@ There are three Postman Environment Variables you must specify for this task. Th
 
 4. Click **Send**. If your request is successful, you should see a screen similar to the one below:
 
-    ![Successful upload of input file](../images/task6-successful_upload.png "Successful upload of input file")
+    ![Successful upload of input file](../images/task6-upload.png "Successful upload of input file")
 
 ## Complete the upload
 

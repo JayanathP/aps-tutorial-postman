@@ -43,4 +43,4 @@ Design Automation WorkItems are queued before they are processed. Processing its
 
     ![WorkItem Status check result](../images/task7-check_status.png "WorkItem Status check result")
 
-[:rewind:](../readme.md "readme.md") [:arrow_backward:](task-6.md "Previous task")
+[:rewind:](../readme.md "readme.md") [:arrow_backward:](task-6.md "Previous task")[:arrow_forward:](task-8.md "Next task")
