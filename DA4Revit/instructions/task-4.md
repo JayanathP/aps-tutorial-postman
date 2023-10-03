@@ -26,13 +26,11 @@ When registering the AppBundle, you inform Design Automation that you want to na
 
 2. Click the **Body** tab, and scroll down such that the **file** row is visible.
 
-3. Move the cursor to the **VALUE** column on the **file** row, and close the box shown in the following image.
-
-    ![File drop-down](../images/task4-appbundle_file_dropdown.png "File drop-down")
+3. Move the cursor to the **VALUE** column on the **file** row.
 
 4. Click **Select Files**, and pick *DeleteWallsApp.zip*, which you downloaded earlier.
 
-    ![Pick DeleteWalls.zip](../images/task4-appbundle_select_file.png "Pick DeleteWalls.zip")
+    ![File drop-down](../images/task4-appbundle_file_dropdown.png "File drop-down")
 
 5. Click **Send**. You should see a screen similar to the following. Note that the response has only a header and no body.
 
