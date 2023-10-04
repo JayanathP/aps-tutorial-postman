@@ -5,7 +5,7 @@
 [![Data-Management](https://img.shields.io/badge/Data%20Management-v2-green.svg)](http://developer.autodesk.com/)
 [![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/)
 
-[![Postman](https://img.shields.io/badge/Postman-v7-orange.svg)](https://www.getpostman.com/)
+[![Postman](https://img.shields.io/badge/Postman-v10-orange.svg)](https://www.getpostman.com/)
 
 [![AutoCAD](https://img.shields.io/badge/Inventor-2019-orange.svg)](http://developer.autodesk.com/)
 [![AutoCAD](https://img.shields.io/badge/Inventor-2020-orange.svg)](http://developer.autodesk.com/)
