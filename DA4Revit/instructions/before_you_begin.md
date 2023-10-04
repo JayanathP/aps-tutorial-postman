@@ -6,13 +6,17 @@ Postman Environments are named configurations that implement variables to store 
 
 1. Download the file *DA4Revit-Environment.postman_environment.json* from the [*collections* folder of this repository](../collections).
 
-2. Import *DA4Revit-Environment.postman_environment.json*
+1. Download the following zip file from the [*collections* folder](../collections) and expand it on your local machine.
+
+    - _revit_collections.zip_
+
+3. Import *DA4Revit-Environment.postman_environment.json*
 
     1. In the Postman header bar, click **Import**. A dialog displays.
 
     2. Drag the file you downloaded in step 1 to the area marked **Drop files here**.
 
-3. Click the **Environment drop-down** on the upper-right, and select **DA4Revit**. The DA4Revit environment loads.
+4. Click the **Environment drop-down** on the upper-right, and select **DA4Revit**. The DA4Revit environment loads.
    ![Postman Environment drop-down](../images/postman_environment_dropdown.png "Postman Environment drop-down")
 
 ## 2. Import the Postman Collection for the tutorial.
