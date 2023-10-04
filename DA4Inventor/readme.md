@@ -7,9 +7,12 @@
 
 [![Postman](https://img.shields.io/badge/Postman-v7-orange.svg)](https://www.getpostman.com/)
 
-[![AutoCAD](https://img.shields.io/badge/Inventor-2018-orange.svg)](http://developer.autodesk.com/)
 [![AutoCAD](https://img.shields.io/badge/Inventor-2019-orange.svg)](http://developer.autodesk.com/)
 [![AutoCAD](https://img.shields.io/badge/Inventor-2020-orange.svg)](http://developer.autodesk.com/)
+[![AutoCAD](https://img.shields.io/badge/Inventor-2021-orange.svg)](http://developer.autodesk.com/)
+[![AutoCAD](https://img.shields.io/badge/Inventor-2022-orange.svg)](http://developer.autodesk.com/)
+[![AutoCAD](https://img.shields.io/badge/Inventor-2023-orange.svg)](http://developer.autodesk.com/)
+[![AutoCAD](https://img.shields.io/badge/Inventor-2024-orange.svg)](http://developer.autodesk.com/)
 
 
 ![Beginner](https://img.shields.io/badge/Level-Beginner-green.svg)
