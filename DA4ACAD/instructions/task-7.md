@@ -5,7 +5,7 @@ Once the WorkItem has completed executing the Activity, Design Automation upload
 
 ## Get temporary download URL for the result
 
-1. On the Postman sidebar, click **Task 7 - Download the Result > Temporary Download URL for the result**. The request loads.
+1. On the Postman sidebar, click **Task 7 - Download the Result > GET S3 Download URL for the result**. The request loads.
 
 2. Click **Send**. You should see a screen similar to the following image.
 

@@ -58,11 +58,11 @@ If your request is successful, you should see a screen similar to the one below:
 
 2. Click the **Body** tab.
 
-7. Click **Select File** and pick the file you downloaded earlier (*box.ipt*).
+3. Click **Select File** and pick the file you downloaded earlier (*box.ipt*).
 
     ![Select file button](../images/task5-select_files_button.png "Select file button")
 
-8. Click **Send**. If your request is successful, you should see a screen similar to the one below:
+4. Click **Send**. If your request is successful, you should see a screen similar to the one below:
 
     ![Successful upload of input file](../images/task5-successful_upload.png "Successful upload of input file")
 

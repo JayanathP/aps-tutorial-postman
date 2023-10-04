@@ -34,7 +34,7 @@ Once the WorkItem has completed executing the Activity, Design Automation upload
 
 ## Download generated BMP file from OSS
 
-1. On the Postman sidebar, click **Task 7 - Download the Result > GET Get S3 Download URL for Generated BMP**. The request loads.
+1. On the Postman sidebar, click **Task 7 - Download the Result > GET Download Generated BMP**. The request loads.
 
     ![Download Result](../images/task7-download_step_4.png "Download Result")
 
