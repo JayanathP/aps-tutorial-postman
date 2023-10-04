@@ -22,3 +22,6 @@ Once the WorkItem has completed executing the Activity, Design Automation upload
 3. In the response area, click **Save response to file**. The output file downloads. Save the file as a *.rvt* file.
 
     ![Save Result](../images/task7-download_step_2b.png "Save Result")
+
+
+[:rewind:](../readme.md "readme.md") [:arrow_backward:](task-7.md "Previous task")
