@@ -58,7 +58,7 @@ To register a new version:
 
 2. Click the **Body** tab. Note that you are now specifying only the engine and description.
 
-3. Click **Send**. You should see a response similar to the following image. As with registering an AppBundle, the `endpointURL` and `formData` information required to upload the AppBundle is saved to Postman Environment variables.
+3. Click **Send**. You should see a response similar to the following image. As with registering an AppBundle, the `endpointURL` and `formData` information required to upload the AppBundle is saved to Postman Collection variables.
 
     ![New version sucessful](../images/task4-appbundle_new_version_successfull.png "New version successful")
 
