@@ -13,7 +13,7 @@
 ![Beginner](https://img.shields.io/badge/Level-Beginner-green.svg)
 [![License](https://img.shields.io/:license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-This folder contains a Postman Collection that contains the requests used in the [Design Automation for Revit Step-by-Step tutorial](https://aps.autodesk.com/en/docs/design-automation/v3/tutorials/revit/) on the APS developer portal. 
+This folder contains a Postman Collection that contains the requests used in the [Automating Revit Step-by-Step tutorial](https://aps.autodesk.com/en/docs/design-automation/v3/tutorials/revit/) on the APS developer portal. 
 
 On the Postman sidebar, requests are stored in folders that have the same name as the corresponding task in the APS developer portal.
 ![APS developer portal menu to Postman](images/aps_portal_menu_2_postman_menu.png "APS developer portal task to Postman mapping")
