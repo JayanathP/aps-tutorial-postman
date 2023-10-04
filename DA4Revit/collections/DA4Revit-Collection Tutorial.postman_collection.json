@@ -10,7 +10,7 @@
 			"name": "Task 2 - Obtain an Access Token",
 			"item": [
 				{
-					"name": "Get an Access Token Copy",
+					"name": "Get an Access Token",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -356,7 +356,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"version\": {{deleteWallsAppVersion}},\r\n  \"id\": \"test\"\r\n}"
+							"raw": "{\r\n  \"version\": 1,\r\n  \"id\": \"test\"\r\n}"
 						},
 						"url": {
 							"raw": "{{dasApiRoot}}/appbundles/DeleteWallsApp/aliases",
@@ -552,7 +552,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"version\": {{deleteWallsAppVersion}}\r\n}"
+							"raw": "{\r\n  \"version\": 2\r\n}"
 						},
 						"url": {
 							"raw": "{{dasApiRoot}}/appbundles/DeleteWallsApp/aliases/test",
@@ -1026,7 +1026,7 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"deleteWallsWorkitemId\", body[\"id\"]);",
+									"pm.collectionVariables.set(\"deleteWallsWorkitemId\", body[\"id\"]);",
 									""
 								],
 								"type": "text/javascript"
@@ -1113,7 +1113,7 @@
 			]
 		},
 		{
-			"name": "Task 7 - Download the Results",
+			"name": "Task 8 - Download the Results",
 			"item": [
 				{
 					"name": "Get S3 Download URL for Resulting RVT file",
@@ -1519,39 +1519,6 @@
 					}
 				}
 			]
-		},
-		{
-			"name": "Delete App",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{dasApiToken}}",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "{{dasApiRoot}}/forgeapps/me",
-					"host": [
-						"{{dasApiRoot}}"
-					],
-					"path": [
-						"forgeapps",
-						"me"
-					]
-				},
-				"description": "[See documentation](https://aps.autodesk.com/en/docs/design-automation/v3/reference/http/forgeapps-id-DELETE/)"
-			},
-			"response": []
 		}
 	],
 	"event": [
