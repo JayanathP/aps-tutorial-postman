@@ -23,7 +23,7 @@ An *Activity* is an action that can be executed using the Design Automation API.
 
     -  `$(args[MaxscriptToExecute].path)` - Will be replaced by the path to a file specified by a parameter named `MaxscriptToExecute`.
 
-- `engine` is the Design Automation engine that the Activity must run on (3ds Max 2020 in this case).
+- `engine` is the Design Automation engine that the Activity must run on (3ds Max 2023 in this case).
 
 3. Click **Send**. If the request is successful, you should see a screen similar to the following image.
 

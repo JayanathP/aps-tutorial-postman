@@ -33,7 +33,7 @@ In this tutorial, you will use a Postman environment variable named `ossBucketKe
 
 2. Click the **Environment quick look** icon on the upper right corner of Postman.
 
-3. In the **CURRENT VALUE** column, in the **ossZipFileObjectKey** row, specify an Object Key for the file you are going to upload (**Tip:** Specify the file name of the dwg file: *input.zip*).
+3. In the **CURRENT VALUE** column, in the **ossZipFileObjectKey** row, specify an Object Key for the file you are going to upload (**Tip:** You can specify the file name of the file you will upload as the Object Key, which is *input.zip*).
 
 4. Click the **Environment quick look** icon to hide the variables.
 
@@ -65,7 +65,7 @@ To make the uploaded file available for download, you must specifically instruct
 
 2. Click **Send**. If your request is successful, you should see a screen similar to the one below:
 
-    ![Successful upload of input file](../images/task5-successful_upload.png "Successful upload of input file")
+    ![Successful upload of input file](../images/task4-completed_upload.png "Completed upload of input file")
 
 ## Obtain Signed URL to Upload MAXScript file to OSS
 
@@ -110,7 +110,7 @@ The Activity you defined in Task 3 generates a zip file containing a *.png* file
 
 2. In the **CURRENT VALUE** column, in the **ossOutputFileObjectKey** row, specify an Object Key for the text file that `ListLayersActivity` generates.
 
-   **Tip:** You can use the default file name of the zip file (*workingFolder.zip*) as its Object Key.
+   **Tip:** You can use the name you specified for the `OutputZip`, when you defined the Activity in Task 3 (*workingFolder.zip*).
 
 
 [:rewind:](../readme.md "readme.md") [:arrow_backward:](task-3.md "Previous task") [:arrow_forward:](task-5.md "Next task")
