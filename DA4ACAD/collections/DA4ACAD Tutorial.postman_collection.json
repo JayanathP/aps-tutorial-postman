@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "545c2837-9d40-4475-a8c1-e807a631fcc3",
+		"_postman_id": "9d0a89a6-5463-4d92-a4f2-2a15a1d5a8c7",
 		"name": "Automating AutoCAD",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3021021"
@@ -287,7 +287,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/Users/pereraj/autodesk-jp-public-repos/aps-tutorial-postman/DA4ACAD/tutorial_data/ListLayers.zip"
+									"src": []
 								}
 							]
 						},
@@ -420,7 +420,7 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"dasActivityAlias\", body[\"id\"]);"
+									"pm.collectionVariables.set(\"dasActivityAlias\", body[\"id\"]);"
 								],
 								"type": "text/javascript"
 							}
@@ -628,7 +628,7 @@
 						"body": {
 							"mode": "file",
 							"file": {
-								"src": "/Users/pereraj/autodesk-jp-public-repos/aps-tutorial-postman/DA4ACAD/tutorial_data/Mechanical - Multileaders.dwg"
+								"src": ""
 							}
 						},
 						"url": {
@@ -852,16 +852,13 @@
 							"script": {
 								"exec": [
 									"var body = JSON.parse(responseBody);",
-									"pm.environment.set(\"ossOutputFileDownloadUrl\", body[\"url\"]);",
+									"pm.collectionVariables.set(\"ossOutputFileDownloadUrl\", body[\"url\"]);",
 									""
 								],
 								"type": "text/javascript"
 							}
 						}
 					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [
@@ -874,10 +871,6 @@
 								"value": "Bearer {{dasApiToken}}"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{}\n"
-						},
 						"url": {
 							"raw": "https://developer.api.autodesk.com/oss/v2/buckets/{{ossBucketKey}}/objects/{{ossOutputFileObjectKey}}/signeds3download",
 							"protocol": "https",
@@ -902,7 +895,7 @@
 					"response": []
 				},
 				{
-					"name": "Download Output from OSS Copy",
+					"name": "Download Output from OSS",
 					"request": {
 						"method": "GET",
 						"header": [],
