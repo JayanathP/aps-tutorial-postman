@@ -1,4 +1,4 @@
-# API Documentation Postman Collection Git Repo
+# Postman Collections for APS Tutorials
 
 This repository contains Postman Collections for the HTTP requests used in some Step-by-Step tutorials published on the [Autodesk Platform Services (APS) Portal](https://aps.autodesk.com/).  The tutorials on the APS Portal use [cURL](https://curl.haxx.se/) to send HTTP requests to APS, while the Postman Collections in this repository use the [Postman](https://www.getpostman.com/) User Interface. They differ only by the tool used to send HTTP requests.
 
